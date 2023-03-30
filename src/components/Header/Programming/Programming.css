@@ -1,0 +1,17 @@
+.programming-container {
+    margin-top: 25px;
+    padding: 0;
+}
+
+.programmers {
+    background: red;
+}
+
+.dashboard {
+    background: yellow;
+}
+
+.programmers,
+.dashboard {
+    padding: 0;
+}
