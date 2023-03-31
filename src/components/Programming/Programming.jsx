@@ -21,9 +21,16 @@ const Programming = () => {
     }
 
     const handleBookMark = (blog) => {
-        let newBookMark = [];
-        newBookMark = [...bookMark, blog];
-        setBookMark(newBookMark);
+        const duplicateBookMark = bookMark.find(bookMark => bookMark.id === blog.id);
+        if (duplicateBookMark) {
+            // console.log('already  bookMarked');
+        }
+        else {
+            let newBookMark = [];
+            newBookMark = [...bookMark, blog];
+            setBookMark(newBookMark);
+        }
+
     }
 
     console.log(bookMark)
