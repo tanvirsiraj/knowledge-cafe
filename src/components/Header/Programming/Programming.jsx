@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Dashboard from '../../Dashboard/Dashboard';
 import Programmer from '../../Programmer/Programmer';
 import './Programming.css'
 
@@ -19,7 +20,7 @@ const Programming = () => {
                 }
             </div>
             <div className="dashboard col-sm-12 col-md-4">
-                <h3>Spent time on read: </h3>
+                <Dashboard></Dashboard>
             </div>
         </div>
     );
