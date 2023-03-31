@@ -1,0 +1,22 @@
+.dashboard-inside {
+    position: sticky;
+    top: 20px;
+}
+
+.time-calculation {
+    font-weight: 700;
+    font-size: 22px;
+    color: #6047EC;
+    background: rgba(96, 71, 236, 0.1);
+    border: 1px solid #6047EC;
+    border-radius: 8px;
+    padding: 20px 30px;
+    white-space: nowrap;
+}
+
+.bookMarked-blogs {
+    background: rgba(17, 17, 17, 0.05);
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 24px;
+}

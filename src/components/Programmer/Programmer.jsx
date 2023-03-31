@@ -6,6 +6,7 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 
 const Programmer = (props) => {
     const { authorName, blogTitle, coverImage, authorImage, readTime, publishDate } = props.data;
+    const addReadTimeToDashBoard = props.addReadTimeToDashBoard;
     return (
         <div className='programmer-block mb-5'>
             <img className='cover-img' src={coverImage} alt="" />
@@ -25,7 +26,7 @@ const Programmer = (props) => {
             <h1 className="blog-title">
                 {blogTitle}
             </h1>
-            <button className='mark-read'>Mark as read</button>
+            <button onClick={() => addReadTimeToDashBoard(props.data)} className='mark-read'>Mark as read</button>
         </div>
     );
 };
