@@ -1,0 +1,12 @@
+.questionnaire-container h1 {
+    padding: 0;
+    color: #6047EC;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+    margin-block: 20px;
+    width: max-content;
+}
+
+.questionnaire-container div {
+    margin-block: 40px;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+}
