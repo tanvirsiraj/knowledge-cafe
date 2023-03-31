@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Dashboard from '../../Dashboard/Dashboard';
-import Programmer from '../../Programmer/Programmer';
+import Dashboard from '../Dashboard/Dashboard';
+import Programmer from '../Programmer/Programmer';
 import './Programming.css'
 
 const Programming = () => {
     const [data, setData] = useState([]);
     const [time, setTime] = useState([]);
+    const [bookMark, setBookMark] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
@@ -18,17 +19,25 @@ const Programming = () => {
         newTime = [...time, blog];
         setTime(newTime);
     }
+
+    const handleBookMark = (blog) => {
+        let newBookMark = [];
+        newBookMark = [...bookMark, blog];
+        setBookMark(newBookMark);
+    }
+
+    console.log(bookMark)
     // console.log(time);
 
     return (
         <div className='programming-container container row row-cols-1 row-cols-md-2 mx-auto'>
             <div className="programmers col-sm-12 col-md-8">
                 {
-                    data.map(data => <Programmer key={data.id} data={data} addReadTimeToDashBoard={addReadTimeToDashBoard}></Programmer>)
+                    data.map(data => <Programmer key={data.id} data={data} addReadTimeToDashBoard={addReadTimeToDashBoard} handleBookMark={handleBookMark}></Programmer>)
                 }
             </div>
             <div className="dashboard col-sm-12 col-md-4">
-                <Dashboard blogs={time}></Dashboard>
+                <Dashboard blogs={time} bookMark={bookMark} ></Dashboard>
             </div>
         </div>
     );

@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './components/Header/Header'
-import Programming from './components/Header/Programming/Programming'
+import Programming from './components/Programming/Programming'
+
 
 function App() {
 
